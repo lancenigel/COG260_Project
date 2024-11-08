@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2708
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 full.csv (nrow = 96120)
+\f1\b0 \
+\
+Each participant has a total of 180 rows (160 studied list words + 20 critical lures). If a participant gave 14 responses, the column L (response) will show all these 14 responses (14 rows). The remaining 166 rows will be empty.\
+\
+Column A: order = this keeps the order of the csv. In case people sort it, they can revert it back to this order.\
+\
+Column B: Experiment ID = the experimental group a participant belongs. delay_AM = Sleep; delay_PM= Wake\
+\
+Column C: Participant.Private.ID = a randomly generated ID for each participant. This ID is consistent across all the csv.\
+\
+Column D: Participant.Browser = The type of browser a participant used to access the study.\
+\
+Column E: Participant.Monitor.Size\
+\
+Column F: Participant.Viewport.Size. Column E = Column F because participants were forced to enter full screen mode.\
+\
+Column G: order_of_response = the order in which the response was given (i.e., r1 = the first response put down by a participant, r2 = the second response, so on and so forth). In row 26 of full.csv, the cell to the right of r25 is empty. This means that this participant produced a total of 24 responses.\
+\
+Column H: response = spell-checked responses (this is used for all the final analyses). If a cell is empty even though original_response is not, it means that a participant gave the same word twice.\
+\
+Column I: lure_recalled = whether a response is one of the 20 critical lures. \
+1 = lure; 0 = not a lure\
+\
+Column J: studied_recalled = whether a response is one of the 160 studied list words. \
+1 = studied word (i.e., correct recall), 0 = not a studied word\
+\
+Column K: all = whether a response is a lure/studied word.\
+1 = this response is either a lure or a studied word\
+0 = this is an intrusion \
+\
+Column L: intrusion = whether a response is an intrusion (i.e., neither a lure nor a studied list word).\
+1 = this is an intrusion\
+0 = this is NOT an intrusion\
+\
+Column M: spelling = whether the original_response has a spelling/typing mistake.  \
+1 = the original response has been corrected for spelling/typos. \
+9 = the original response contains two words (e.g., bumpyroad). This is likely a result of participant not using a comma. The two words are split as a result.\
+\
+Column N: duplicated = whether a participant gave the same response twice. \
+1 = duplicated; 0 = not duplicated \
+\
+Column O: original_response = this shows the exact response given by the participant. Some responses therefore contain spelling mistakes. Note that for ease of processing, if a participant gave \'93New York\'94, it was merged to become \'93newyork\'94.\
+\
+**********************************************************************\
+
+\f0\b lure_final.csv (nrow = 9760)
+\f1\b0 \
+\
+This is a simplified csv containing only the critical lure. Each participant has 20 rows because there were 20 critical lures a participant could possibly produce. Note that the 46 participants who were excluded for meeting our pre-registered exclusion criteria are NOT included in this csv.\
+\
+Column A: order = this keeps the order of the csv. \
+\
+Column B: Delay = Interval \
+control = immediate groups; delay = 12-hour delay groups\
+\
+Column C: Test.Time = AM or PM\
+\
+Column D: Participant.Private.ID = a randomly generated ID for each participant. This ID is consistent across all the csv.\
+\
+Column E: lure_word = a target critical lure \
+\
+Column I: original_response = the unaltered response from participant. \
+NA = the participant didn\'92t produce this specific critical lure.\
+\
+Column J: lure_recalled = whether the critical lure was produced by the participant. \
+1 = Yes, 0 = No\
+\
+**********************************************************************\
+
+\f0\b studied_final.csv (nrow = 78080)\
+
+\f1\b0 \
+This is a simplified csv containing only the studied list word. Each participant has 160 rows because there are 160 studied list words a participant could possibly recall. Note that the 46 participants who were excluded for meeting our pre-registered exclusion criteria are NOT included in this csv.\
+\
+The columns are essentially the same as lure_final.csv, except Column E (studied_word) now represents studied list words and Column G (studied_recalled) now represents whether a studied list word was recalled by a participant.}
